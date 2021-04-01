@@ -5,7 +5,7 @@ SCREEN_WIDTH  = 400
 SCREEN_HEIGHT = 800
 SPEED = 10
 GRAVITY = 1
-GAME_SPEED = 10
+GAME_SPEED = 13
 
 GROUND_WIDTH = 2 * SCREEN_WIDTH
 GROUND_HEIGHT = 100
@@ -15,18 +15,18 @@ class Bird(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
 
-        self.images = [pygame.image.load('bluebird-upflap.png').convert_alpha(),
-                       pygame.image.load('bluebird-midflap.png').convert_alpha(),
-                       pygame.image.load('bluebird-downflap.png').convert_alpha()]
+        self.images = [pygame.image.load('bk1.png').convert_alpha(),
+                       pygame.image.load('bk2.png').convert_alpha(),
+                       pygame.image.load('bk3.png').convert_alpha()]
 
         self.speed = SPEED
 
         self.current_image = 0
 
-        self.image = pygame.image.load('bluebird-midflap.png').convert_alpha()
+        self.image = pygame.image.load('bk1.png').convert_alpha()
 
         self.rect = self.image.get_rect()
-        self.rect[0] = SCREEN_WIDTH / 2
+        self.rect[0] = SCREEN_WIDTH / 2.8
         self.rect[1] = SCREEN_HEIGHT / 2
 
     def update(self):
@@ -83,7 +83,7 @@ clock = pygame.time.Clock()
 
 
 while True:
-    clock.tick(20)
+    clock.tick(15)
 
     for event in pygame.event.get():
        if event.type == QUIT:
