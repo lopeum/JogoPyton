@@ -101,7 +101,7 @@ while True:
     if is_off_screen(ground_group.sprites()[0]):
         ground_group.remove(ground_group.sprites()[0])
 
-        new_ground = Ground(GROUND_WIDTH - 20)
+        new_ground = Ground(GROUND_WIDTH - 30)
         ground_group.add(new_ground)
 
     bird_group.update()
